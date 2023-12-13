@@ -153,9 +153,8 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                                                      os.path.join(os.path.dirname(__file__), "garments/bottom5.png"),
                                                             ])
 
-
-        with gr.Column():
             run_button = gr.Button(value="Run")
+        with gr.Column():
             gallery = gr.Image()
 
             run_button.click(fn=get_tryon_result, 
