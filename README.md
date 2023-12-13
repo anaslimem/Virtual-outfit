@@ -1,13 +1,13 @@
 ---
 title: OutfitAnyone
-emoji: 📊
-colorFrom: pink
-colorTo: blue
+emoji: 🏢
+colorFrom: red
+colorTo: pink
 sdk: gradio
-sdk_version: 4.9.0
+sdk_version: 4.8.0
 app_file: app.py
 pinned: false
-license: cc-by-nd-4.0
+license: cc-by-nc-4.0
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
