@@ -137,7 +137,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                 garment_top = gr.Image(sources='upload', type="numpy", label="top garment")
                 example_top = gr.Examples(inputs=garment_top,
                                           examples_per_page=5,
-                                          examples=[os.path.join(os.path.dirname(__file__), "garments/top4.png"),
+                                          examples=[os.path.join(os.path.dirname(__file__), "garments/top222.JPG"),
                                                     os.path.join(os.path.dirname(__file__), "garments/top5.png"),
                                                     os.path.join(os.path.dirname(__file__), "garments/top3.JPG"),
                                                     os.path.join(os.path.dirname(__file__), "garments/dress1.png"),
