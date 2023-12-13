@@ -139,7 +139,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                                           examples_per_page=5,
                                           examples=[os.path.join(os.path.dirname(__file__), "garments/top222.JPG"),
                                                     os.path.join(os.path.dirname(__file__), "garments/top5.png"),
-                                                    os.path.join(os.path.dirname(__file__), "garments/top111.png"),
+                                                    os.path.join(os.path.dirname(__file__), "garments/top333.png"),
                                                     os.path.join(os.path.dirname(__file__), "garments/dress1.png"),
                                                     os.path.join(os.path.dirname(__file__), "garments/dress2.png"),
                                                             ])
