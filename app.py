@@ -36,7 +36,7 @@ MODEL_MAP = {
 def add_waterprint(img):
 
     h, w, _ = img.shape
-    img = cv2.putText(img, 'Powered by OutfitAnyone', (int(0.25*w), h-20), cv2.FONT_HERSHEY_PLAIN, 2, (128, 128, 128), 2, cv2.LINE_AA)
+    img = cv2.putText(img, 'Powered by OutfitAnyone', (int(0.3*w), h-20), cv2.FONT_HERSHEY_PLAIN, 2, (128, 128, 128), 2, cv2.LINE_AA)
 
     return img
 
