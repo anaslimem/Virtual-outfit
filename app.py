@@ -185,6 +185,6 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
 if __name__ == "__main__":
     ip = requests.get('http://ifconfig.me/ip', timeout=1).text.strip()
     print("ip address alibaba", ip)
-    demo.queue(max_size=3)
+    demo.queue(max_size=10)
     demo.launch()
 
