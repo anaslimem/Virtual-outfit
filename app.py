@@ -4,12 +4,14 @@ import numpy as np
 import json
 import random
 from PIL import Image, ImageDraw, ImageFont
+import asyncio
 
 import requests
 import base64
 import gradio as gr
 # from IPython import embed
 
+machine_number = 0
 model = os.path.join(os.path.dirname(__file__), "models/eva/Eva_0.png")
 
 MODEL_MAP = {
@@ -41,9 +43,7 @@ def add_waterprint(img):
     return img
 
 
-
 def get_tryon_result(model_name, garment1, garment2, seed=1234):
-
 
     # model_name = "AI Model " + model_name.split("\\")[-1].split(".")[0] # windows
     model_name = "AI Model " + model_name.split("/")[-1].split(".")[0] # linux
@@ -163,7 +163,8 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                                     garment_top,
                                     garment_down,
                                     ], 
-                             outputs=[gallery])
+                             outputs=[gallery],
+                             concurrency_limit=2)
         
 
     # Examples
