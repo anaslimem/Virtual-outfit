@@ -164,7 +164,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                                     garment_down,
                                     ], 
                              outputs=[gallery],
-                             concurrency_limit=4)
+                             concurrency_limit=2)
         
 
     # Examples
