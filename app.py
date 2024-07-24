@@ -96,7 +96,7 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
             <h4 >v0.9</h4>
             <h5 style="margin: 0;">If you like our project, please give us a star  on Github to stay updated with the latest developments.</h5>
             <div style="display: flex; justify-content: center; align-items: center; text-align: center;>
-                <a href="https://github.com/HumanAIGC/OutfitAnyone"><img src="https://img.shields.io/badge/Arxiv-0000.00000-red"></a>
+                <a href="https://arxiv.org/abs/2407.16224"><img src="https://img.shields.io/badge/Arxiv-2407.16224-red"></a>
                 <a href='https://humanaigc.github.io/outfit-anyone/'><img src='https://img.shields.io/badge/Project_Page-OutfitAnyone-green' alt='Project Page'></a>
                 <a href='https://github.com/HumanAIGC/OutfitAnyone'><img src='https://img.shields.io/badge/Github-Repo-blue'></a>
             </div>
