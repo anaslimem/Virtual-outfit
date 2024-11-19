@@ -1,4 +1,4 @@
 opencv-python
 IPython
-gradio==3.41.2
+gradio==5.5.0
 gradio-client==0.5.0
