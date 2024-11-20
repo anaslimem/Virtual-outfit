@@ -85,24 +85,15 @@ def get_tryon_result(model_name, garment1, garment2, seed=1234):
 
 
 with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px !important} ") as demo:
-    # gr.Markdown("# Outfit Anyone v0.9")
-    gr.HTML(
+       gr.HTML(
         """
         <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
-        <a href="https://github.com/HumanAIGC/OutfitAnyone" style="margin-right: 20px; text-decoration: none; display: flex; align-items: center;">
-        </a>
         <div>
-            <h1 >Outfit Anyone: Ultra-high quality virtual try-on for Any Clothing and Any Person</h1>
-            <h4 >v0.9</h4>
-            <h5 style="margin: 0;">If you like our project, please give us a star  on Github to stay updated with the latest developments.</h5>
-            <div style="display: flex; justify-content: center; align-items: center; text-align: center;>
-                <a href="https://arxiv.org/abs/2407.16224"><img src="https://img.shields.io/badge/Arxiv-2407.16224-red"></a>
-                <a href='https://humanaigc.github.io/outfit-anyone/'><img src='https://img.shields.io/badge/Project_Page-OutfitAnyone-green' alt='Project Page'></a>
-                <a href='https://github.com/HumanAIGC/OutfitAnyone'><img src='https://img.shields.io/badge/Github-Repo-blue'></a>
-            </div>
+            <h1 >Ultra-high quality virtual try-on </h1>
         </div>
         </div>
-        """)
+        """
+    )
     with gr.Row():
         with gr.Column():
             init_image = gr.Image(sources='clipboard', type="filepath", label="model", value=model)
@@ -124,15 +115,6 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
                                             os.path.join(os.path.dirname(__file__), MODEL_MAP.get('AI Model Yaqi_0')),
                                             ])
         with gr.Column():
-            gr.HTML(
-                """
-                <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
-                <div>
-                    <h3>Models are fixed and cannot be uploaded or modified; we only support users uploading their own garments.</h3>
-                    <h4 style="margin: 0;">For a one-piece dress or coat, you only need to upload the image to the 'top garment' section and leave the 'lower garment' section empty.</h4>
-                </div>
-                </div>
-                """)
             with gr.Row():
                 garment_top = gr.Image(sources='upload', type="numpy", label="top garment")
                 example_top = gr.Examples(inputs=garment_top,
@@ -184,8 +166,6 @@ with gr.Blocks(css = ".output-image, .input-image, .image-preview {height: 400px
     )
 
 if __name__ == "__main__":
-    ip = requests.get('http://ifconfig.me/ip', timeout=1).text.strip()
-    print("ip address alibaba", ip)
     demo.queue(max_size=10)
     demo.launch()
 
